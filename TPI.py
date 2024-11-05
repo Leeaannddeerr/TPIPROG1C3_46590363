@@ -3,9 +3,11 @@ import getpass
 import random
 
 def tiempo321(tiempo):
+    print()
     for i in range(tiempo, 0, -1):
         print(str(i)+"...")
         time.sleep(1)
+
 def quiengana():
     global mis_puntos
     global puntos_rival
@@ -32,13 +34,13 @@ def quiengana():
     elif jugador1[0] > "0" and jugador1[0] < "4" and jugador2[0] > "0" and jugador2[0] < "4" and jugador1[0] == jugador2[0]:
             print("*" * 37,"\n   𝔼 𝕄 ℙ 𝔸 𝕋 𝔼:   ℕ 𝔸 𝔻 𝕀 𝔼   𝕊 𝕌 𝕄 𝔸\n"+"*" * 37) 
     else:
-         print(" \nERROR. Un jugador ingreso una opcion incorrecta, nadie suma en esta ronda.\nSeleccionen una opcion correcta: 1=Piedra, 2=Papel, 3=Tijera.\n ")
+         print("\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n\n               ⚠️               \n  Un jugador ingresó una opción\n  incorrecta, nadie suma en esta\n              ronda.\n \n   Selecciona correctamente:\n   1=Piedra, 2=Papel, 3=Tijera.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
 
 def mostrarpuntos():
       if mis_puntos < puntos and puntos_rival < puntos:
-        print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"-La partida acabara cuando uno de los dos jugadores llegue a {puntos} puntos.\n ")
+        print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"➢ La partida acabará cuando uno de los dos jugadores llegue a {puntos} puntos.\n ")
       elif mis_puntos == puntos or puntos_rival == puntos:
-        print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"-El ganador de esta ronda llego a los {puntos} puntos y finalizo la partida.\n ")
+        print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"➣ El ganador de esta ronda llegó a los {puntos} puntos y finalizó la partida.\n ")
 opcion = 1  
 while opcion != 0:
     #aca iria el menu 
@@ -48,11 +50,11 @@ while opcion != 0:
         juego = 0 #Se declara esta variable en 0 para poder entrar al while y preguntarle al usuario que modo de juego quiere
         puntos = 0 #Esta variable es donde se guardaran los puntos a jugar en la partida. El jugador que iguale primero al valor guardado en puntos será el ganador.
         while juego != 3:
-            #se muestra en pantalla el menu del juego y sus opciones (jugar con ammigo, jugar con pc o volver al menu principal). Luego el usuario ingresara una de las opciones. En caso de equivocarse se le pide que ingrese nuevamente.
+            #Se muestra en pantalla el menu del juego y sus opciones (jugar con ammigo, jugar con pc o volver al menu principal). Luego el usuario ingresara una de las opciones. En caso de equivocarse se le pide que ingrese nuevamente.
             print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n\n    1- Jugar con un amigo🫂\n\n    2- Jugar contra la PC🤖\n\n    3- Salir del juego🚪\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
-            juego= int(input("Seleccione una opcion: "))
+            juego= int(input("Seleccione una opción: "))
             if juego == 3:
-             print(" \nVolviendo al menu principal...\n ")
+             print(" \nVolviendo al menú principal...\n ")
              time.sleep(3) 
              break
             elif juego == 1 or juego == 2:
