@@ -45,9 +45,10 @@ while opcion != 0:
     print("1-Piedra, Papel o Tijera \n2-Ahorcado\n3-Tres en Raya\n0-Salir")
     opcion=int(input())
     if opcion == 1:
-        juego = 0
-        puntos = 0
+        juego = 0 #Se declara esta variable en 0 para poder entrar al while y preguntarle al usuario que modo de juego quiere
+        puntos = 0 #Esta variable es donde se guardaran los puntos a jugar en la partida. El jugador que iguale primero al valor guardado en puntos será el ganador.
         while juego != 3:
+            #se muestra en pantalla el menu del juego y sus opciones (jugar con ammigo, jugar con pc o volver al menu principal). Luego el usuario ingresara una de las opciones. En caso de equivocarse se le pide que ingrese nuevamente.
             print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n\n    1- Jugar con un amigo🫂\n\n    2- Jugar contra la PC🤖\n\n    3- Salir del juego🚪\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
             juego= int(input("Seleccione una opcion: "))
             if juego == 3:
@@ -58,7 +59,7 @@ while opcion != 0:
              print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n \n ¿A cuantos puntos desea jugar?\n \n        🪨     📜    ✂️\n \n        Recomendado: 3🔥\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
              puntos = int(input("Ingrese los puntos a jugar: "))
             else:
-             print(" \nPorfavor seleccione una opcion correcta.\n ")        
+             print("\n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️               \n       Opcion incorrecta.\n  Porfavor vuelva a intentarlo.\n \n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")   
             if puntos > 0 and puntos <11:
                 mis_puntos = 0
                 puntos_rival = 0
@@ -97,6 +98,8 @@ while opcion != 0:
                                 time.sleep(3)
                                 control = False           
             elif puntos <=0 or puntos >10:
-               print(" \nLos puntos a jugar deben ser minimo de 1 y maximo de 10 para una mejor experiencia. Porfavor vuelva a intentarlo.")
+               if juego == 1 or juego ==2:
+                print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n  Los puntos a jugar deben ser\n  minimo de 1 y maximo de 10\n  para una mejor experiencia. \n\n  Porfavor vuelva a intentarlo.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
+                time.sleep(3)
     else:
              pass                                                  
