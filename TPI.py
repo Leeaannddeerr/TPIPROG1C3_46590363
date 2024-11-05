@@ -6,7 +6,6 @@ def tiempo321(tiempo):
     for i in range(tiempo, 0, -1):
         print(str(i)+"...")
         time.sleep(1)
-
 def quiengana():
     global mis_puntos
     global puntos_rival
