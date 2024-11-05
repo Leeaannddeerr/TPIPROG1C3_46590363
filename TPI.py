@@ -1,15 +1,16 @@
-def tiempo321():
-    print("3...")
-    time.sleep(1)
-    print("2...")
-    time.sleep(1)
-    print("1...")
-    time.sleep(1)
+import time
+import getpass
+import random
+
+def tiempo321(tiempo):
+    for i in range(tiempo, 0, -1):
+        print(str(i)+"...")
+        time.sleep(1)
 
 def quiengana():
     global mis_puntos
     global puntos_rival
-    tiempo321()
+    tiempo321(3)
     print()
     if jugador1[0] == "1" and jugador2[0] == "3":
             print("*" * 50,"\n𝕁 𝕌 𝔾 𝔸 𝔻 𝕆 ℝ (𝟙) 𝕊 𝕌 𝕄 𝔸: Piedra🪨  gana a Tijera✂️\n"+"*" * 50)
@@ -48,7 +49,6 @@ while opcion != 0:
         juego = 0
         puntos = 0
         while juego != 3:
-            import time
             print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n\n    1- Jugar con un amigo🫂\n\n    2- Jugar contra la PC🤖\n\n    3- Salir del juego🚪\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
             juego= int(input("Seleccione una opcion: "))
             if juego == 3:
@@ -68,13 +68,11 @@ while opcion != 0:
                         if (mis_puntos < puntos and puntos_rival < puntos):  
                             if juego ==1:
                                 print()
-                                import getpass
                                 jugador1 = getpass.getpass("Jugador 1:  1=Piedra, 2=Papel, 3=Tijera: ")
                                 jugador2 = getpass.getpass("Jugador 2:  1=Piedra, 2=Papel, 3=Tijera: ")
                                 quiengana()
                                 mostrarpuntos()
                             elif juego == 2:
-                                import random
                                 opciones = ["1", "2", "3"]
                                 print()
                                 jugador1 = input("Jugador 1:  1=Piedra, 2=Papel, 3=Tijera: ")
