@@ -53,7 +53,7 @@ def main():#menu
           print("1. Ingresar una palabra") 
           print("2. Mostrar historial de palabras en jeringoso")
           print("3. Salir") 
-          opcion = input("Elige una de las siguientes opciones (1, 2, o 3):").strip
+          opcion = input("Elige una de las siguientes opciones (1, 2, o 3):").strip()
           if opcion == "1":  # Opción para ingresar una palabra
             palabra = input("Ingresa una palabra: ").strip()
             palabra_jeringosa = jeringoso(palabra)
