@@ -1,6 +1,6 @@
 import TPIjeringoso
 import TPI_escalones_Gastón_Godoy_Dechecco as escalones
-import TPI_tres_en_raya
+import TPITresEnRaya
 
 def menu():
     print("Bienvenido a los 5 juegos")
@@ -27,7 +27,7 @@ def menu():
         elif usuario == "4":
             pass
         elif usuario == "5":
-            TPI_tres_en_raya.inicio_j()
+            TPITresEnRaya.inicio_j()
 
 if __name__ == "__main__":
     menu()
