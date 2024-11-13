@@ -21,3 +21,8 @@ def main():#maneja la interaccion con el usuario
           print("Palabra en jeringoso:",palabra_jeringosa)
 print("Diccionario de palabras en jeringoso:")
 
+<<<<<<< HEAD
+=======
+if __name__ == "__main__":
+    main()
+>>>>>>> 34d36be4a8e1972afc4d81a4750a95b0969b4ff0
