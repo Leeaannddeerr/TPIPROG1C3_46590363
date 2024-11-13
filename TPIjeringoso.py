@@ -23,27 +23,19 @@ def separar_silabas(palabra):
 def jeringoso(palabra):#recibe palabra y convierte en jeringoso
     jeringosa = '' #cadena que almacena
     vocales = ('a', 'e', 'i', 'o', 'u')#tupla de vocales
-    silabas = separar_silabas(palabra) #separar la palabra en silabas
+    #silabas = separar_silabas(palabra) #separar la palabra en silabas
 
     silaba_anterior = '' #variable para almacenar la silaba anterior
 
-    for i in range(len(silabas)):
-        silaba = silabas[i]
-        silaba_jeringosa = '' #cadena para la silaba convertida a jeringoso
+    for i in range(len(palabra)):
+        letra = palabra[i]
+    
 
-        for j in range(len(silaba)):
-            letra = silaba [j]
-            if letra.lower()in vocales:
-                if j == len(silaba) -1 and silaba_anterior:
-                    silaba_jeringosa += 'p'+ silaba_anterior[-1]
-                else:
-                    silaba_jeringosa += letra
-            else: 
-                silaba_jeringosa += letra
-    jeringosa += silaba_jeringosa
-
-    silaba_anterior = silaba
-
+        if letra.lower()in vocales:
+            jeringosa +=  letra + 'p' + letra 
+        else:
+            jeringosa += letra
+                 
     return jeringosa
 
 def main():#menu
