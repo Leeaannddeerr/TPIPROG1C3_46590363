@@ -5,12 +5,12 @@ import random
 
 def errores_ejecucion(error): #funcion definida para ahorrar el mismo print en ciertas partes del codigo cuando usemos el control de las excepciones.
     global mi_try_control #declaramos la variable como global asi el subprograma puede conocerla y trnajar con ella.
-    if error == "Keyboard": #manejo de excepcion "Ctrl + C"
-      print("\n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n            ¡ERROR!\n Para salir del juego presione \n    la opción 3 en el menú.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
-    elif error == "Value" or "Index": #manejo de expecion para valueerror y indexerror
-      print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n            ¡ERROR!\n  Presionaste incorrectamente, \n      vuelve a intentarlo.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛") 
-    time.sleep(2) #tiempo para leer el error antes de continuar
     mi_try_control = True #mi_try_control cambia su valor booleano.
+    if error == "Keyboard": #manejo de excepcion "Ctrl + C"
+      print(" \n \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n            ¡ERROR!\n Para salir del juego presione \n    la opción 3 en el menú.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
+    elif error == "Value" or "Index": #manejo de expecion para valueerror y indexerror
+      print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n            ¡ERROR!\n  Presionaste incorrectamente, \n      vuelve a intentarlo.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
+    time.sleep(2) #tiempo para leer el error antes de continuar
 
 def tiempo321(segundos): #Tiene como parametro formal la variable que se utilizará dentro de esta función llamada "segundos". 
     print() #este print hace un enter para separar lo que este arriba y se vea más prolijo.
@@ -51,13 +51,15 @@ def quiengana(j_1, j_2): #el parametro actual de jugador_1 y jugador_2 fueron re
     except KeyboardInterrupt:
        errores_ejecucion("Keyboard")  
 
-def mostrarpuntos(): #funcion para mostrar los puntos del usuario y del rival.
-      if mis_puntos < puntos and puntos_rival < puntos:
-        print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"➢ La partida acabará cuando uno de los dos jugadores llegue a {puntos} puntos. 💥\n ")
-      elif mis_puntos == puntos or puntos_rival == puntos:
-        print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"➣ El ganador de esta ronda llegó a los {puntos} puntos y finalizó la partida. 💥\n ")
-juego = 0 #Se declara esta variable en 0 para poder entrar al while y preguntarle al usuario que modo de juego quiere
-while juego != 3:
+def mostrarpuntos(mis_puntos, puntos_rival, puntos): #funcion para mostrar los puntos del usuario y del rival.
+  if mis_puntos < puntos and puntos_rival < puntos:
+    print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"➢ La partida acabará cuando uno de los dos jugadores llegue a {puntos} puntos. 💥\n ")
+  elif mis_puntos == puntos or puntos_rival == puntos:
+    print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"➣ El ganador de esta ronda llegó a los {puntos} puntos y finalizó la partida. 💥\n ")
+
+def LeanPiedraPapelTijera():
+ juego = 0 #Se declara esta variable en 0 para poder entrar al while y preguntarle al usuario que modo de juego quiere
+ while juego != 3:
    puntos = 0 #Esta variable es donde se guardaran los puntos a jugar en la partida. El jugador que iguale primero al valor guardado en puntos será el ganador.
    mis_puntos = 0 #en esta variable se acumularan los puntos del jugador 1.
    puntos_rival = 0 #en esta variable se acumularan los puntos del jugador 2 o la PC.
@@ -84,11 +86,7 @@ while juego != 3:
      except ValueError:
         errores_ejecucion("Value")
      except KeyboardInterrupt:
-       errores_ejecucion("Keyboard")   
-   else:
-     if mi_try_control == False: #si el jugador no presionó un enter, es decir no pasó por el ValueError, se mostrará este mensaje.
-        print("\n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️               \n       Opcion incorrecta.\n  Porfavor vuelva a intentarlo.\n \n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")   
-        time.sleep(2)    
+       errores_ejecucion("Keyboard")    
    if puntos > 0 and puntos <11: #si los puntos elegidos son correctos, inicia el juego.
         control = True #esta variable se inicializa en True para estar dentro del siguiente ciclo while.
         while control == True: #si control es true, el codigo se seguirá ejecutando, si es false saldrá del ciclo.
@@ -100,7 +98,7 @@ while juego != 3:
                   #print() #este print separa en la terminal las elecciones de los dos jugadores para que sea mas estetico  **fue reemplazado por un \n que cumple la misma funcion**
                   jugador2 = getpass.getpass("\nJugador 2:  1=Piedra, 2=Papel, 3=Tijera: ")
                   quiengana(jugador1,jugador2) #llamamos a la funcion para mostrar el resultado de la ronda y le pasamos los parametros actuales que ingresó cada jugador.
-                  mostrarpuntos() #llamamos a esta funcion para mostrar el progreso actual de la partida.
+                  mostrarpuntos(mis_puntos, puntos_rival, puntos) #llamamos a esta funcion para mostrar el progreso actual de la partida.
                 except KeyboardInterrupt:
                    errores_ejecucion("Keyboard")              
             elif juego == 2: #si opcion es 2 significa que el usuario quiere jugar contra un jugador no real (la pc).
@@ -109,7 +107,7 @@ while juego != 3:
                     jugador1 = input("\nJugador 1🎮:  1=Piedra🪨  2=Papel📜 3=Tijera✂️ : ") #turno del jugador 1 para elegir.
                     jugador2 = random.choice(opciones) #turno de la pc para elegir.
                     quiengana(jugador1, jugador2) 
-                    mostrarpuntos()
+                    mostrarpuntos(mis_puntos, puntos_rival, puntos)
                   except KeyboardInterrupt:
                      errores_ejecucion("Keyboard")
             elif juego == 3: #si en el menú del juego el usuario ingresa la opción 3 significa que no quiere jugar, por lo cual se lo llevará al menú principal.
@@ -129,3 +127,6 @@ while juego != 3:
             print("Volviendo al menu del juego...\n")
             time.sleep(3) 
             control = False
+
+if __name__ == "__main__":
+    LeanPiedraPapelTijera()
