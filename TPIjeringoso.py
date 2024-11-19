@@ -1,4 +1,3 @@
-#import re
 #funcion para separar la palabra en silabas 
 def separar_silabas(palabra):
     silabas = []
