@@ -1,10 +1,11 @@
 import TPIjeringoso
-import TPI_Escalones 
-import TPITresEnRaya
+import TPI_5Escalones 
+import Tres_en_Raya
 import TPI
+import juego3
 
 def menu():
-    print("""
+  print("""
             𝓑𝓲𝓮𝓷𝓿𝓮𝓷𝓲𝓭𝓸 
                  𝓪  
        🇻  🇱  🇦  🇬  🇬  🇦  🇲  🇪  🇸 
@@ -24,14 +25,26 @@ def menu():
           
 ╚════════════════════════════════.✵.═╝                 
         """)
-    usuario = ""
-    tupla = ("0","1","2","3","4","5")
-
-    while usuario not in tupla: 
-          try:
-            usuario = input("Ingrese una opción: ")
-            if usuario == "0":
-                  print("""
+  
+  usuario = ""
+  tupla = ("0","1","2","3","4","5")
+  while usuario not in tupla: 
+    try:
+      usuario = input("Ingrese una opción: ")
+    except KeyboardInterrupt:
+      print("Error, para salir presione: 0 ")
+    if usuario == "1":
+      TPI.LeanPiedraPapelTijera()
+    elif usuario == "2":
+      TPIjeringoso.main()
+    elif usuario == "3":
+      TPI_5Escalones.general()
+    elif usuario == "4":
+      juego3.ahorcado()
+    elif usuario == "5":
+      Tres_en_Raya.inicio_j()
+    elif usuario == "0":
+      print("""
        🇻  🇱  🇦  🇬  🇬  🇦  🇲  🇪  🇸 
 ╔═.✵.════════════════════════════════╗
 
@@ -40,18 +53,6 @@ def menu():
 ╚════════════════════════════════.✵.═╝              
    
         """)
-            elif usuario == "1":
-              TPI.LeanPiedraPapelTijera()
-            elif usuario == "2":
-              TPIjeringoso.main()
-            elif usuario == "3":
-              TPI_Escalones.general()
-            elif usuario == "4":
-              pass
-            elif usuario == "5":
-              TPITresEnRaya.inicio_j()
-          except KeyboardInterrupt:
-            print("Error, para salir presione: 0 ")
 
 if __name__ == "__main__":
-    menu()
+  menu()
