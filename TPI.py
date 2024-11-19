@@ -2,6 +2,7 @@
 import time
 import getpass
 import random
+import Menu
 
 def errores_ejecucion(error): #funcion definida para ahorrar el mismo print en ciertas partes del codigo cuando usemos el control de las excepciones.
     global mi_try_control #declaramos la variable como global asi el subprograma puede conocerla y trnajar con ella.
@@ -79,7 +80,8 @@ def LeanPiedraPapelTijera():
      errores_ejecucion("Keyboard")
    if juego == 3: #si el jugador selecciona la opcion 3, saldremos del ciclo repetitvo "mientras" y volveremos al menú principal.
      print(" \nVolviendo al menú principal...\n ")
-     time.sleep(3) 
+     time.sleep(3)
+     Menu.menu() #vuelve al menu
      break #este break sirve para salir del codigo inmediatamente y que no se evaluen otros condicionales. 
    elif juego == 1 and mi_try_control == False or juego == 2 and mi_try_control == False:
      try: #manejo de excepciones en donde se eligen los puntos a jugar
