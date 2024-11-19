@@ -1,3 +1,4 @@
+import Menu
 #funcion para separar la palabra en silabas 
 def separar_silabas(palabra):
     silabas = []
@@ -42,7 +43,7 @@ def main():#menu
           print("\nMenu de opciones:📖")
           print("1. Ingresar una palabra ✍🏼") 
           print("2. Mostrar historial de palabras en jeringoso 📚")
-          print("3. Salir 📤") 
+          print("3. Volver al menú de juegos")
           opcion = input("Elige una de las siguientes opciones (1, 2, o 3): ").strip() #pide al usuario una opcion y elimina los espacios en blanco al inicio y final
           if opcion == "1":  # Opción para ingresar una palabra
             palabra = input("Ingresa una palabra: ").strip()
@@ -57,10 +58,10 @@ def main():#menu
             else:
                 print("No se han ingresado palabras") 
           elif opcion == "3":
-              print("Gracias! Hasta la próxima👋🏼")
+              print("Gracias! Hasta la próxima👋🏼", Menu.menu()) #te devuelve al menu principal de los juegos
               break
           else:
-              print("Opción no válida. Por favor ingrese una opción válida (1, 2, o 3)")
+              print("Opción no válida. Por favor ingrese una opción válida (1, 2, 3, o 4)")
         
 if __name__ == "__main__":
     main()
