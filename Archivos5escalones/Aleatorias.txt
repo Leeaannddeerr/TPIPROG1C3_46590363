@@ -1,0 +1,16 @@
+1) ¿a que temperatura hierve el agua (grados celcius)?
+    a: 90°      c: 120°
+    b: 100°     d: 200°///
+2) ¿Qué país ha ganado más Copas del Mundo?
+    a: Argentina      c: Brasil
+    b: Francia        d: Alemania///
+3) ¿Qué vitamina fabrica el propio cuerpo usando la luz del sol?
+    a: Vitamina C      c: Vitamina A
+    b: Vitamina D      d: Vitamina E///
+4) ¿Cuántos fantasmas persiguen a Pac-Man al principio de cada partida?
+    a: 4      c: 8
+    b: 6      d: 1///
+5) ¿Cuál es el animal nacional de Australia?
+    a: Condor     c: Lagartija
+    b: Flamenco    d: Canguro///
+

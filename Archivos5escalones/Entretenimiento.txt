@@ -1,0 +1,17 @@
+1) ¿Cuál es la fruta favorita de los minions?
+    a: Papas       c: Zanahorias
+    b: Frutillas   d: Bananas///
+2) ¿De qué color es la G mayúscula en el logotipo de Google?
+    a: Roja       c: Azul
+    b: Amarilla   d: Verde///
+3) Las Tortugas Ninja se llaman Leonardo, Donatello, Michelangelo ¿y...‍?
+    a: Doraemon     c: Rumachello
+    b: Raphael      d: Miguel///
+4) En la era del hielo, ¿quien era scrat? El animal que persigue la bellota
+    a: Ardilla     c: Marmota
+    b: Nutria      d: Zorro///
+5) ¿Cual es el juego mas vendido del mundo?
+    a: Grand Theft Auto V     c: Pac-Man
+    b: Tetris                 d: Minecraft///
+
+

@@ -1,0 +1,15 @@
+1) ¿Cuántos océanos hay en la Tierra?
+    a: 2       c: 5
+    b: 3       d: 8///
+2) ¿En qué país se encuentra la famosa torre de Pisa?
+    a: Italia      c: España
+    b: Francia     d: Estados unidos///
+3) ¿Cual es el país más grande del mundo?
+    a: Rusia      c: India
+    b: China      d: Brasil///
+4) ¿Cuál es la montaña más alta del mundo?
+    a: Aconcagua        c: Manaslu
+    b: Monte everest    d: Makalu///
+5) ¿Cuál es la lengua más hablada del mundo?
+    a: Español     c: Portugues
+    b: Mandarin    d: Ingles///

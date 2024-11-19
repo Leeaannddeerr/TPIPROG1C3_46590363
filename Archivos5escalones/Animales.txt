@@ -1,0 +1,15 @@
+1) ¿Qué animal es famoso por su habilidad de hacerse el muerto?
+    a: Zarigüeya       c: Zorro
+    b: Conejo          d: Buho///
+2) ¿Cuáles son los únicos felinos que viven en grupos?
+    a: Tigres           c: Leopardos
+    b: Pumas            d: Leones///
+3) ¿Qué animal tiene el cerebro más grande?
+    a: Elefante          c: Delfin
+    b: Cachalote         d: Calamar///
+4) ¿Qué mamífero africano es conocido particularmente por su risa?
+    a: Zebra          c: Avestruz
+    b: Jirafa         d: Hiena///
+5) ¿Cuantas patas tiene una araña?
+    a: 4         c: 8
+    b: 6         d: 10///

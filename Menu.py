@@ -1,6 +1,8 @@
 import TPIjeringoso
-import TPI_escalones_Gastón_Godoy_Dechecco as escalones
+import TPI_Escalones 
 import TPITresEnRaya
+import TPI
+
 def menu():
     print("""
             𝓑𝓲𝓮𝓷𝓿𝓮𝓷𝓲𝓭𝓸 
@@ -39,11 +41,11 @@ def menu():
    
         """)
             elif usuario == "1":
-              pass
+              TPI.LeanPiedraPapelTijera()
             elif usuario == "2":
               TPIjeringoso.main()
             elif usuario == "3":
-              escalones.general()
+              TPI_Escalones.general()
             elif usuario == "4":
               pass
             elif usuario == "5":
