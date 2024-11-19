@@ -8,7 +8,7 @@ def errores_ejecucion(error): #funcion definida para ahorrar el mismo print en c
     mi_try_control = True #mi_try_control cambia su valor booleano.
     if error == "Keyboard": #manejo de excepcion "Ctrl + C"
       print(" \n \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n            ¡ERROR!\n Para salir del juego presione \n    la opción 3 en el menú.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
-    elif error == "Value" or "Index": #manejo de expecion para valueerror y indexerror
+    elif error == "Value" or error == "Index": #manejo de expecion para valueerror y indexerror
       print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n            ¡ERROR!\n  Presionaste incorrectamente, \n      vuelve a intentarlo.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
     time.sleep(2) #tiempo para leer el error antes de continuar
 
@@ -57,12 +57,17 @@ def mostrarpuntos(mis_puntos, puntos_rival, puntos): #funcion para mostrar los p
   elif mis_puntos == puntos or puntos_rival == puntos:
     print("︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 1: {mis_puntos}\n"+"︵‿︵‿︵‿︵" * 2,"\n"f"Puntos del jugador 2: {puntos_rival}\n"+"︵‿︵‿︵‿︵" * 2,"\n"+"\n"f"➣ El ganador de esta ronda llegó a los {puntos} puntos y finalizó la partida. 💥\n ")
 
+puntos = 0 #Esta variable es donde se guardaran los puntos a jugar en la partida. El jugador que iguale primero al valor guardado en puntos será el ganador.
+mis_puntos = 0 #en esta variable se acumularan los puntos del jugador 1.
+puntos_rival = 0 #en esta variable se acumularan los puntos del jugador 2 o la PC.
+  
 def LeanPiedraPapelTijera():
  juego = 0 #Se declara esta variable en 0 para poder entrar al while y preguntarle al usuario que modo de juego quiere
  while juego != 3:
-   puntos = 0 #Esta variable es donde se guardaran los puntos a jugar en la partida. El jugador que iguale primero al valor guardado en puntos será el ganador.
-   mis_puntos = 0 #en esta variable se acumularan los puntos del jugador 1.
-   puntos_rival = 0 #en esta variable se acumularan los puntos del jugador 2 o la PC.
+   global mis_puntos, puntos_rival, puntos
+   juego = 0
+   mis_puntos = 0
+   puntos_rival = 0
    #Se muestra en pantalla el menu del juego y sus opciones (jugar con amigo, jugar con pc o volver al menu principal). Luego el usuario ingresara una de las opciones. En caso de equivocarse se le pide que ingrese nuevamente.
    print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n\n    1- Jugar con un amigo🫂\n\n    2- Jugar contra la PC🤖\n\n    3- Salir del juego🚪\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
    mi_try_control = False #variable que ayudará a ejecutar las excepciones correctamente
@@ -86,7 +91,7 @@ def LeanPiedraPapelTijera():
      except ValueError:
         errores_ejecucion("Value")
      except KeyboardInterrupt:
-       errores_ejecucion("Keyboard")    
+       errores_ejecucion("Keyboard")
    if puntos > 0 and puntos <11: #si los puntos elegidos son correctos, inicia el juego.
         control = True #esta variable se inicializa en True para estar dentro del siguiente ciclo while.
         while control == True: #si control es true, el codigo se seguirá ejecutando, si es false saldrá del ciclo.
@@ -114,6 +119,8 @@ def LeanPiedraPapelTijera():
                   print("Volviendo al menu principal...")
                   time.sleep(3) #gracias al import time y funcion time.sleep podemos hacer un regreso más lento para aumentar la realidad de nuestro codigo (simulando la carga del programa).
                   control = False #modificamos el valor booleano de control para salir del ciclo.                
+            else:
+              control = False      
           elif mis_puntos == puntos: #si el jugador 1 llega a los puntos necesarios para ganar, la partida finalizará y se mostrara el siguiente print.
             time.sleep(4) #tiempo para que se lean los puntos, el jugador que suma y la finalizacion de la partida antes de mostrar el mensaje del ganador
             print("      ⚔️ 𝐹𝒾𝓃 𝒹𝑒 𝓁𝒶 𝓅𝒶𝓇𝓉𝒾𝒹𝒶⚔️\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n \n      Ganador: Jugador 1. 🏆\n \n         🪨     📜    ✂️\n \n      Gracias por jugar. 🫶\n \n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n")
@@ -122,6 +129,7 @@ def LeanPiedraPapelTijera():
             time.sleep(3) #tiempo para que el jugador lea el mensaje antes de volver al menú del juego.
             control = False #se modifica la variable control para salir del ciclo while y volver al menú del juego.
           elif puntos_rival == puntos: #si el jugador 2 llega a los puntos necesarios para ganar, la partida finalizará y se mostrara lo mismo que en el caso del jugador 1.                        time.sleep(4)
+            time.sleep(4)
             print("      ⚔️ 𝐹𝒾𝓃 𝒹𝑒 𝓁𝒶 𝓅𝒶𝓇𝓉𝒾𝒹𝒶⚔️\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n \n      Ganador: Jugador 2. 🏆\n \n         🪨     📜    ✂️\n \n      Gracias por jugar. 🫶\n \n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n")
             time.sleep(6)
             print("Volviendo al menu del juego...\n")
