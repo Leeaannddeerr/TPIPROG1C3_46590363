@@ -86,6 +86,7 @@ def LeanPiedraPapelTijera():
    elif juego == 1 and mi_try_control == False or juego == 2 and mi_try_control == False:
      try: #manejo de excepciones en donde se eligen los puntos a jugar
        print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n \n ¿A cuantos puntos desea jugar?\n \n        🪨     📜    ✂️\n \n        Recomendado: 3🔥\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
+       puntos = 0
        puntos = int(input("Ingrese los puntos a jugar: ")) #aca el usuario ingresara los puntos a jugar (lo permitido es entre 1 y 10, en caso de equivocarse se le volvera a pedir)
        if puntos <= 0 or puntos > 10:
         print(" \n「 ✦ 𝒫𝒾𝑒𝒹𝓇𝒶, 𝒫𝒶𝓅𝑒𝓁 𝑜 𝒯𝒾𝒿𝑒𝓇𝒶 ✦ 」\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n              ⚠️        \n  Los puntos a jugar deben ser\n  minimo de 1 y maximo de 10\n  para una mejor experiencia. \n\n  Porfavor vuelva a intentarlo.\n\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
